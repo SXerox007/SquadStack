@@ -1,0 +1,15 @@
+version: "3.7"
+
+services:
+    squadstack-api:
+        image: squadstack
+        ports:
+        - "50051:50051"
+        env_file:
+        - deployment/local.env
+        networks:
+            - network1
+
+networks:
+    network1:
+        driver: bridge        
